@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+  <head>
+    <script src ="https://lightning.filipmartinsson.com/modal/btcpay.js"></script>
+    <script type="text/javascript">
+       var id = "<%= invoiceId %>";
+       console.log(id);
+       window.onload = function(){
+         
+          window.btcpay.showInvoice(id);
+          window.btcpay.onModalWillLeave(function(){
+          window.location.href = "invoice/" + id;
+          //localhost:3000/invoice/{invoiceId}
+        })
+      }
+    </script>
+  </head>
+  <body>
+</body>
+
+</html>
