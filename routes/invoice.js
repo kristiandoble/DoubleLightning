@@ -30,10 +30,12 @@ router.get('/:id', async function(req, res, next) {
 /* Create invoice. */
 // POST -> /invoice
 router.post('/', function(req, res, next) {
-  var product = JSON.parse(req.body.product);
-  var dollarAmount = product.price;
+  //var product = JSON.parse(req.body.product);
+  //var dollarAmount = product.price;
+  var dollarAmount = req.body.amount;
+  
   var buyer = {
-    email: req.body.email,
+    //email: req.body.email,
     name: req.body.name,
     address1: req.body.address,
     locality: req.body.city,
