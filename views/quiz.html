@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../stylesheets/style.css">
+    <title>Quiz</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo"><i class="fas fa-bolt"></i> NEXT(LIGHT)</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="./index.html" class="navbar__links">
+                    Home
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="./bitcoin.html" class="navbar__links">
+                    Bitcoin
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="./lightning.html" class="navbar__links">
+                    Lightning 
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/opennode.html" class="navbar__links">
+                    OpenNode  
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="./redeem.html" class="navbar__links">
+                    Redeem 
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="https://legacy.lnpay.co/to/ababf" class="navbar__links">
+                    Redeem (Paywall)
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="./quiz.html" class="navbar__links">
+                    Quiz
+                    </a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="./signup.html" class="button">
+                    Sign Up 
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<div class="quiz-body">
+    <div class="quiz-container" id="quiz">
+        <div class="quiz-header">
+            <h1 id="header">Which format is this?</h1>
+            <br>
+          <h2 id="question">Question Text</h2>
+          <ul>
+            <li>
+              <input type="radio" name="answer" id="a" class="answer">
+              <label for="a" id="a_text">Answer</label>
+            </li>
+    
+            <li>
+              <input type="radio" name="answer" id="b" class="answer">
+              <label for="b" id="b_text">Answer</label>
+            </li>
+    
+            <li>
+              <input type="radio" name="answer" id="c" class="answer">
+              <label for="c" id="c_text">Answer</label>
+            </li>
+    
+            <li>
+              <input type="radio" name="answer" id="d" class="answer">
+              <label for="d" id="d_text">Answer</label>
+            </li>
+    
+          </ul>
+        </div>
+    
+        <button id="submit">Submit</button>
+    
+      </div>
+      <!----<div class="control">
+        <button id="start-button" class="start-btn btn">Start</button>
+    </div>--->
+      
+
+    </div>
+
+  <div class="footer__container">
+    <div class="footer__links">
+        <div class="footer__link--wrapper">
+            <div class="footer__link--items">
+                <h2> About Us</h2>
+                <a href="/sign__up">How it works</a>
+                <a href="/">Testimonials</a>
+                <a href="/">Careers</a>
+                <a href="/">Investments</a>
+                <a href="/">Terms of Services</a>
+            </div>
+            <div class="footer__link--items">
+                <h2> Contact Us</h2>
+                <a href="/">Contact</a>
+                <a href="/">Support</a>
+                <a href="/">Destinations</a>
+                <a href="/">Sponsorships</a>
+            </div>
+        </div>
+        <div class="footer__link--wrapper">
+            <div class="footer__link--items">
+                <h2> Videos</h2>
+                <a href="/">Submit Video</a>
+                <a href="/">Ambassadors</a>
+                <a href="/">Agency</a>
+                <a href="/">Influencer</a>
+            </div>
+            <div class="footer__link--items">
+                <h2> Social Media</h2>
+                <a href="/">Instagram</a>
+                <a href="/">Facebook</a>
+                <a href="/">Youtube</a>
+                <a href="/">Twitter</a>
+            </div>
+        </div>
+    </div>
+    <div class="social__media">
+        <div class="social__media--wrap">
+            <div class="footer__logo">
+                <a href="/" id="footer__logo">
+                    <i class="fas fa-gem"></i>NEXT(Lightning)</a>
+            </div>
+            <p class="website__rights">NEXT 2020. All rights reserved</p>
+            <div class="social__icons">
+                <a href="/" class="social__icons--link" target="_blank">
+                  <i class="fab fa-facebook"></i>
+                  </a>
+                <a href="/" class="social__icons--link" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                  </a>
+                <a href="/" class="social__icons--link" target="_blank">
+                  <i class="fab fa-youtube"></i>
+                  </a>
+                <a href="/" class="social__icons--link" target="_blank">
+                  <i class="fab fa-twitter"></i>
+                  </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+    
+    <script>
+        const quizData = [
+    {
+        header: "What is the size of the output?",
+        question: "RIPEMD160(SHA256(pubkey))",
+        a: "20 bytes",
+        b: "160 bytes",
+        c: "256 bytes",
+        d: "512 bytes",
+        correct: "a",
+    },
+    {
+        header: "Which type of Script is this?",
+        question: "scriptPubKey: OP_DUP OP_HASH160 <PubKeyHash> OP_EQUALVERIFY OP_CHECKSIG scriptSig: <Signature> <PubKey>",
+        a: "Pay-2-pub-key",
+        b: "Pay-to-script-Hash",
+        c: "Pay-2-Witness-Script-Hash",
+        d: "Pay-2-Pub-Key-Hash",
+        correct: "d",
+    },
+    {
+        header: "Which type of Script is this?",
+        question: "scriptPubKey: OP_DUP OP_HASH160 <PubKeyHash> OP_EQUALVERIFY OP_CHECKSIG scriptSig: <Signature> <PubKey>",
+        a: "Pay-2-pub-key",
+        b: "Pay-to-script-Hash",
+        c: "Pay-2-Witness-Script-Hash",
+        d: "Pay-2-Pub-Key-Hash",
+        correct: "d",
+    },
+    {
+        question: "What year was JavaScript launched?",
+        a: "1996",
+        b: "1995",
+        c: "1994",
+        d: "none of the above",
+        correct: "b",
+    },
+
+
+];
+const startButton = document.getElementById('start-button')
+const quiz= document.getElementById('quiz')
+const answerEls = document.querySelectorAll('.answer')
+const questionEl = document.getElementById('question')
+const headerEl = document.getElementById('header')
+const a_text = document.getElementById('a_text')
+const b_text = document.getElementById('b_text')
+const c_text = document.getElementById('c_text')
+const d_text = document.getElementById('d_text')
+const submitBtn = document.getElementById('submit')
+
+
+let currentQuiz = 0
+let score = 0
+
+
+loadQuiz()
+
+function loadQuiz() {
+
+    deselectAnswers()
+
+    const currentQuizData = quizData[currentQuiz]
+
+    headerEl.innerText = currentQuizData.header
+    questionEl.innerText = currentQuizData.question
+    a_text.innerText = currentQuizData.a
+    b_text.innerText = currentQuizData.b
+    c_text.innerText = currentQuizData.c
+    d_text.innerText = currentQuizData.d
+}
+
+function deselectAnswers() {
+    answerEls.forEach(answerEl => answerEl.checked = false)
+}
+
+function getSelected() {
+    let answer
+    answerEls.forEach(answerEl => {
+        if(answerEl.checked) {
+            answer = answerEl.id
+        }
+    })
+    return answer
+}
+
+
+submitBtn.addEventListener('click', () => {
+    const answer = getSelected()
+    if(answer) {
+       if(answer === quizData[currentQuiz].correct) {
+           score++
+       }
+
+       currentQuiz++
+
+       if(currentQuiz < quizData.length) {
+           loadQuiz()
+       } else {
+           quiz.innerHTML = `
+           <h2>You answered ${score}/${quizData.length} questions correctly</h2>
+
+           <button onclick="location.reload()">Reload</button>
+           `
+       }
+    }
+})
+
+    </script>
+    
+</body>
+</html>

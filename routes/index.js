@@ -22,8 +22,17 @@ router.get('/redeem.html', function(req, res, next) {
   res.render('redeem', { title: 'Lightning' });
 });
 
+router.get('/opennode.html', function(req, res, next) {
+  res.render('opennode', { title: 'Lightning' });
+});
+
+
 router.get('/.html', function(req, res, next) {
-  res.render('bitcoin', { title: 'Lightning' , message: "Welcome to Lightning Payment"});
+  res.render('bitcoin', { title: 'Lightning'});
+});
+
+router.get('/quiz.html', function(req, res, next) {
+  res.render('quiz', { title: 'Lightning'});
 });
 
 router.get('/signup.html', function(req, res, next) {
