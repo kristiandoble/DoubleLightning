@@ -419,7 +419,7 @@
       rgba(0, 0, 0, 0) 0%,
       rgba(17, 17, 17, 0.6) 100%
     ),
-    url('./images/pic3.jpg');
+    url('./images/login.jpg');
   background-size: cover;
   position: relative;
   color: #fff;
@@ -435,7 +435,7 @@
       rgba(0, 0, 0, 0) 0%,
       rgba(17, 17, 17, 0.9) 100%
     ),
-    url('./images/pic4.jpg');
+    url('./images/netflix.jpg');
 }
 
 .services__card h2 {
@@ -933,7 +933,7 @@ ul li{
 ul li label{
   cursor: pointer;
 }
-button{
+#submit{
   background-color: #f77062;
   color: #fff;
   border: none;
@@ -944,10 +944,10 @@ button{
   font-family: inherit;
   padding: 1.3rem;
 }
-button:hover{
+#submit:hover{
   background-color: #fe5196;
 }
-button:focus{
+#submit:focus{
   outline: none;
   background-color: #44b927;
 }
