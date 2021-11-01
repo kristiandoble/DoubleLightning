@@ -2,13 +2,13 @@ var express = require('express');
 var router = express.Router();
 //const BTCPAY_PRIV_KEY = process.env.BTCPAY_PRIV_KEY;
 //const BTCPAY_MERCHANT_KEY = process.env.BTCPAY_MERCHANT_KEY;
-const BTCPAY_PRIV_KEY = "b55bdccf579ef72469eb82d0efb305b273ef354842e0e97aa0453c548498587";
-const BTCPAY_MERCHANT_KEY = "3nbgXwAYraBwkezFhKaveCrrQJYdaVsyHvYYVbDwb1yD";
+const BTCPAY_PRIV_KEY = "4d93583fc65a474db04bb46d4f12c3a91da15bd1ea8c3c0a2652174eef52928e";
+const BTCPAY_MERCHANT_KEY = "3nL77CtwAACA2ARux5DVAqcfAKq5LmV3TPKeVFZKxmmQ";
 
 // Initialize the client
 const btcpay = require('btcpay')
 const keypair = btcpay.crypto.load_keypair(new Buffer.from(BTCPAY_PRIV_KEY, 'hex'));
-const client = new btcpay.BTCPayClient('https://lightning.filipmartinsson.com', keypair, {merchant: BTCPAY_MERCHANT_KEY})
+const client = new btcpay.BTCPayClient('https://btcpay100432.lndyn.com', keypair, {merchant: BTCPAY_MERCHANT_KEY})
 
 
 /* get & verify invoice. */
